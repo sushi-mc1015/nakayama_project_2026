@@ -68,7 +68,7 @@ export default function Home() {
               href="/admin"
               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg transition transform hover:scale-105"
             >
-              管理者ページ
+              その他
             </a>
           </div>
         </div>
