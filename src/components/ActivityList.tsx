@@ -49,7 +49,7 @@ export function ActivityList() {
           onClick={refreshActivities}
           className="text-sm bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded transition"
         >
-          🔄 更新
+          更新
         </button>
       </div>
 
