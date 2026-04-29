@@ -98,7 +98,7 @@ export default function Home() {
               href="#activities"
               className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition transform hover:scale-105 shadow-lg shadow-blue-500/25"
             >
-              活動記録を見る
+              毎日の活動記録を見る
             </a>
           </div>
         </div>
