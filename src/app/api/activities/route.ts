@@ -6,6 +6,7 @@ let activitiesMemory: Array<{
   date: string;
   description: string;
   timestamp: number;
+  image?: string;
 }> = [];
 
 const ADMIN_PASSWORD = process.env.ACTIVITY_PASSWORD || 'nakayama2026';
@@ -19,7 +20,7 @@ export async function GET() {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { password, date, description } = body;
+    const { password, date, description, image } = body;
 
     // パスワード認証
     if (password !== ADMIN_PASSWORD) {
@@ -38,12 +39,24 @@ export async function POST(request: NextRequest) {
     }
 
     // 新しい活動を追加
-    const newActivity = {
+    const newActivity: any = {
       id: Date.now().toString(),
       date,
       description,
       timestamp: Date.now(),
     };
+
+    // 画像がある場合は保存（サイズ制限：5MB）
+    if (image && typeof image === 'string' && image.startsWith('data:')) {
+      const imageSize = image.length;
+      if (imageSize > 5 * 1024 * 1024) {
+        return NextResponse.json(
+          { error: '画像のサイズが大きすぎます（5MB以下）' },
+          { status: 400 }
+        );
+      }
+      newActivity.image = image;
+    }
 
     activitiesMemory.push(newActivity);
 
