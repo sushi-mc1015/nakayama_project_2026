@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { ActivityForm } from '@/components/ActivityForm';
 import { ActivityList } from '@/components/ActivityList';
 
 export default function Home() {
@@ -97,8 +96,16 @@ export default function Home() {
 
       {/* Activity Section */}
       <section className="max-w-6xl mx-auto px-6 py-20 border-t border-slate-700">
-        <div className="space-y-12">
-          <ActivityForm key={refreshKey} onActivityAdded={() => setRefreshKey(prev => prev + 1)} />
+        <div className="space-y-8">
+          <div className="flex items-center justify-between">
+            <h3 className="text-3xl font-bold">活動記録</h3>
+            <a
+              href="/admin"
+              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg transition"
+            >
+              記録を追加 →
+            </a>
+          </div>
           <ActivityList key={refreshKey} />
         </div>
       </section>
