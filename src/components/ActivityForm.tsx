@@ -89,7 +89,7 @@ export function ActivityForm({ onActivityAdded }: ActivityFormProps) {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                placeholder="パスワードを入力"
+                placeholder="123"
                 className="w-full bg-slate-600 border border-slate-500 rounded px-3 py-2 text-white"
               />
             </div>

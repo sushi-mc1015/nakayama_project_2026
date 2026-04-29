@@ -76,19 +76,19 @@ export default function Home() {
         <h3 className="text-3xl font-bold mb-12 text-center">主な機能</h3>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-blue-500 transition">
-            <div className="text-3xl mb-4">📊</div>
+            <div className="text-3xl mb-4"></div>
             <h4 className="text-xl font-bold mb-3">進捗ダッシュボード</h4>
             <p className="text-slate-300">プロジェクトの進捗状況をリアルタイムで追跡できます。</p>
           </div>
 
           <div className="bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-blue-500 transition">
-            <div className="text-3xl mb-4">👥</div>
+            <div className="text-3xl mb-4"></div>
             <h4 className="text-xl font-bold mb-3">チーム紹介</h4>
             <p className="text-slate-300">プロジェクトに携わるチームメンバーの情報です。</p>
           </div>
 
           <div className="bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-blue-500 transition">
-            <div className="text-3xl mb-4">📅</div>
+            <div className="text-3xl mb-4"></div>
             <h4 className="text-xl font-bold mb-3">マイルストーン</h4>
             <p className="text-slate-300">重要な目標と期限を一覧で確認できます。</p>
           </div>
