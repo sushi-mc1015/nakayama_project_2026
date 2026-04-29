@@ -1,4 +1,12 @@
+'use client';
+
+import { useState } from 'react';
+import { ActivityForm } from '@/components/ActivityForm';
+import { ActivityList } from '@/components/ActivityList';
+
 export default function Home() {
+  const [refreshKey, setRefreshKey] = useState(0);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 text-white">
       {/* Navigation */}
@@ -84,6 +92,14 @@ export default function Home() {
             <h4 className="text-xl font-bold mb-3">マイルストーン</h4>
             <p className="text-slate-300">重要な目標と期限を一覧で確認できます。</p>
           </div>
+        </div>
+      </section>
+
+      {/* Activity Section */}
+      <section className="max-w-6xl mx-auto px-6 py-20 border-t border-slate-700">
+        <div className="space-y-12">
+          <ActivityForm key={refreshKey} onActivityAdded={() => setRefreshKey(prev => prev + 1)} />
+          <ActivityList key={refreshKey} />
         </div>
       </section>
 
