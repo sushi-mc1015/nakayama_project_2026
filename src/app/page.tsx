@@ -119,8 +119,8 @@ export default function Home() {
 
           <div className="group bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700/50 hover:border-purple-500/50 transition">
             <div className="text-5xl mb-4 group-hover:scale-110 transition">👥</div>
-            <h4 className="text-xl font-bold mb-3">チーム連携</h4>
-            <p className="text-slate-400">メンバー情報とチーム構成</p>
+            <h4 className="text-xl font-bold mb-3">チームメンバー</h4>
+            <p className="text-slate-400">チームメンバー</p>
           </div>
 
           <div className="group bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition">
